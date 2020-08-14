@@ -1,0 +1,64 @@
+{
+  "name": "inventory-api",
+  "version": "1.0.0",
+  "description": "Backend REST API for Inventory management tool",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "NODE_ENV=development nodemon app.js",
+    "lint": "eslint . --fix",
+    "format": "prettier . --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm run lint"
+    }
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "devDependencies": {
+    "eslint": "^7.3.1",
+    "eslint-config-prettier": "^6.11.0",
+    "husky": "^4.2.5",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1"
+  },
+  "dependencies": {
+    "@hapi/joi": "^15.0.0",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "get-parameter-names": "^0.3.0",
+    "http-errors": "^1.8.0",
+    "http-status-codes": "^1.4.0",
+    "lodash": "^4.17.19",
+    "mongoose": "^5.9.20",
+    "winston": "^3.3.3"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "docs/*",
+      "local/*",
+      "salesforce/*",
+      "scripts/*"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint-config-prettier"
+    ],
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2019
+    }
+  }
+}

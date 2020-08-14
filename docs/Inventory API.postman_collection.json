@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "adfad1f2-62b3-4880-9ded-aad6ec08289b",
+		"name": "Inventory API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all Inventories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/inventories",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"inventories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create inventory items",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"items\": [\n\t\t{\n\t\t\t\"name\": \"Sugar\",\n\t\t\t\"quantity\": 15\n\t\t},\n\t\t{\n\t\t\t\"name\": \"Salt\",\n\t\t\t\"quantity\": 10\n\t\t},\n\t\t{\n\t\t\t\"name\": \"Milk\",\n\t\t\t\"quantity\": 8\n\t\t},\n\t\t{\n\t\t\t\"name\": \"Orid dal\",\n\t\t\t\"quantity\": 4\n\t\t},\n\t\t{\n\t\t\t\"name\": \"Toor dal\",\n\t\t\t\"quantity\": 8\n\t\t}\n\t]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/inventories",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"inventories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Inventory items",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"items\": [\n\t\t{\n\t\t\t\"name\": \"Sugar\",\n\t\t\t\"quantity\": 12\n\t\t},\n\t\t{\n\t\t\t\"name\": \"Salt\",\n\t\t\t\"quantity\": 10\n\t\t},\n\t\t{\n\t\t\t\"name\": \"Milk\",\n\t\t\t\"quantity\": 10\n\t\t},\n\t\t{\n\t\t\t\"name\": \"Orid dal\",\n\t\t\t\"quantity\": 4\n\t\t},\n\t\t{\n\t\t\t\"name\": \"Toor dal\",\n\t\t\t\"quantity\": 3\n\t\t}\n\t]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/inventories",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"inventories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Inventory items",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"items\": [\n\t\t{\n\t\t\t\"name\": \"Milk\"\n\t\t}\n\t]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/inventories",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"inventories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consume items",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"items\": [\n\t\t{\n\t\t\t\"name\": \"Sugar\",\n\t\t\t\"quantity\": 3\n\t\t},\n\t\t{\n\t\t\t\"name\": \"Orid dal\",\n\t\t\t\"quantity\": 2\n\t\t},\n\t\t{\n\t\t\t\"name\": \"Toor dal\",\n\t\t\t\"quantity\": 1\n\t\t}\n\t]\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/consume",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"consume"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
